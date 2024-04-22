@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="880.0" prefWidth="1083.0" style="-fx-background-color: #E6E6E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jareed.demo2.controllers.VerEstudiantesController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002a87" height="130.0" layoutX="-24.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1115.0" />
+        <Label layoutX="534.0" layoutY="-12.0" prefHeight="142.0" prefWidth="565.0" text="Estudiantes" textFill="#151515">
+            <font>
+                <Font name="System Bold" size="96.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="verButton" layoutX="432.0" layoutY="715.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedVerButton" prefHeight="97.0" prefWidth="268.0" style="-fx-background-radius: 10; -fx-background-color: green;" text="Ver" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Button>
+      <TableView fx:id="TableMySQL" layoutX="388.0" layoutY="242.0" prefHeight="330.0" prefWidth="266.0">
+        <columns>
+          <TableColumn fx:id="nameSQLColumn" prefWidth="88.0" text="Nombre" />
+          <TableColumn fx:id="apellidoSQLColumn" prefWidth="95.9998779296875" text="Apellido" />
+            <TableColumn fx:id="matriculaSQLColumn" prefWidth="79.199951171875" text="Matricula" />
+        </columns>
+      </TableView>
+      <TableView fx:id="TableAccess" layoutX="61.0" layoutY="246.0" prefHeight="319.0" prefWidth="270.0">
+         <columns>
+            <TableColumn fx:id="nameAccessColumn" prefWidth="76.79998016357422" text="Nombre" />
+            <TableColumn fx:id="apellidoAccessColumn" prefWidth="108.79998779296875" text="Apellido" />
+            <TableColumn fx:id="matriculaAccessColumn" prefWidth="87.9998779296875" text="Matricula" />
+         </columns>
+      </TableView>
+      <TableView fx:id="TableSQLite" layoutX="696.0" layoutY="252.0" prefHeight="323.0" prefWidth="258.0">
+         <columns>
+            <TableColumn fx:id="nameSQLiteColumn" prefWidth="94.4000244140625" text="Nombre" />
+            <TableColumn fx:id="apellidoSQLiteColumn" prefWidth="84.8001708984375" text="Apellido" />
+            <TableColumn fx:id="matriculaSQLiteColumn" prefWidth="81.60009765625" text="Matricula" />
+         </columns>
+      </TableView>
+      <Label layoutX="132.0" layoutY="189.0" text="Access">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="454.0" layoutY="189.0" text="MySQL">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="776.0" layoutY="182.0" text="SQLite">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="regresarButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedRegresarButton" prefHeight="65.0" prefWidth="135.0" text="Button" />
+    </children>
+</AnchorPane>
